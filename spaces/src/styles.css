@@ -1,0 +1,8 @@
+/* You can add global styles to this file, and also import other style files */
+@import url("https://fonts.googleapis.com/css?family=Heebo:400,500,700");
+@import "~bootstrap/dist/css/bootstrap.css";
+
+body {
+  font-family: "Heebo", sans-serif;
+  background: #f5f5f5;
+}
