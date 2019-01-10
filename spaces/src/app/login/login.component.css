@@ -1,0 +1,14 @@
+.login {
+  width: 767px;
+  max-width: 100%;
+  background: #fff;
+  border-radius: 10px;
+  margin-top: 30px;
+}
+.login__form {
+  padding: 0px 15px;
+  width: 100%;
+}
+form input {
+  width: 100%;
+}

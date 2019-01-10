@@ -1,0 +1,12 @@
+.users {
+  list-style: none;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+  margin-top: 50px;
+  padding: 1px 0 0;
+}
+.users li {
+  border-bottom: 1px solid #dedede;
+  margin: 0px 15px;
+}

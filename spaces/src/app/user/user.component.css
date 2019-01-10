@@ -1,0 +1,32 @@
+.user {
+  border-radius: 10px;
+  padding: 15px;
+  cursor: pointer;
+  margin: 15px 0px;
+}
+.user:hover {
+  background-color: rgba(142, 68, 173, 0.05);
+}
+.user__data img {
+  border-radius: 50%;
+  width: 55px;
+  height: 55px;
+  margin-right: 10px;
+}
+.user__data h3 {
+  font-size: 15px;
+  font-weight: 500;
+  color: #34495e;
+}
+.user__actions button {
+  border: 1px solid #8e44ad;
+  background: #fff;
+  border-radius: 3px;
+  width: 30px;
+  height: 30px;
+  margin: 0px 5px;
+}
+.user__actions a {
+  display: inline-block;
+  margin-left: 30px;
+}
