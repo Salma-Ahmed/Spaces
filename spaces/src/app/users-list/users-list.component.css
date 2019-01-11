@@ -1,12 +1,37 @@
-.users {
-  list-style: none;
+.users-view {
   background: #fff;
   border-radius: 10px;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
-  margin-top: 50px;
+  transition: all 0.3s ease-in-out;
+}
+.users-view.expanded {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+.user-view {
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  background-color: #f5f5f5;
+}
+.user-view.expanded {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.users {
+  list-style: none;
   padding: 1px 0 0;
 }
 .users li {
   border-bottom: 1px solid #dedede;
   margin: 0px 15px;
+}
+.close {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  color: #8e44ad;
+  opacity: 1;
+  width: 14px;
+  height: 14px;
+  font-weight: 300;
 }

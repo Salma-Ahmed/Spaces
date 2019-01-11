@@ -6,3 +6,24 @@ body {
   font-family: "Heebo", sans-serif;
   background: #f5f5f5;
 }
+.form-control.ng-touched.ng-invalid {
+  border: 2px solid red;
+}
+.custom-btn {
+  font-size: 15px;
+  font-weight: bold;
+  padding: 10px 25px;
+  height: 40px;
+  border: 1px solid #8e44ad;
+  border-radius: 20px;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+  text-transform: uppercase;
+}
+.custom-btn-dark {
+  color: #fff;
+  background-color: #8e44ad;
+}
+.custom-btn-light {
+  color: #8e44ad;
+  background-color: transparent;
+}

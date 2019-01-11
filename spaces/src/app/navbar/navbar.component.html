@@ -25,7 +25,8 @@
           </li>
         </ul>
         <span class="navbar-text">
-          <app-button text="Login"></app-button>
+          <app-button text="Login" *ngIf="!authService.isLoggedIn()"></app-button>
+          <app-button text="Logout" (click)="signOut()" *ngIf="authService.isLoggedIn()"></app-button>
         </span>
       </div>
     </nav>

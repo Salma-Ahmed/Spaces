@@ -7,6 +7,9 @@
 .user:hover {
   background-color: rgba(142, 68, 173, 0.05);
 }
+.user.active {
+  background-color: #8e44ad;
+}
 .user__data img {
   border-radius: 50%;
   width: 55px;

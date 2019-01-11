@@ -1,0 +1,27 @@
+.single-user {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+.single-user__img {
+  max-width: 125px;
+}
+.single-user__title {
+  font-size: 25px;
+  color: #34495e;
+  font-weight: 500;
+  margin: 15px 0 25px;
+}
+button {
+  min-width: 110px;
+  text-transform: capitalize;
+  padding: 0px 0px 0px 15px;
+  margin: 0px 10px;
+  background-repeat: no-repeat;
+  background-position: 23px center;
+}
+.single-user__edit {
+  background-image: url("../../assets/img/edit-white.svg");
+}
+.single-user__delete {
+  background-image: url("../../assets/img/delete.svg");
+}

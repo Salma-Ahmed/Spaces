@@ -1,8 +1,40 @@
-<ul class="users">
-  <li *ngFor="let user of users">
-    <app-user
-      img="{{ user.avatar }}"
-      name="{{ user.first_name }} {{ user.last_name }}"
-    ></app-user>
-  </li>
-</ul>
+<div class="row mb-5">
+  <div
+    class="col-12 users-view"
+    [ngClass]="{
+      'col-12': !isSingleUser,
+      'col-lg-8 col-md-7 col-xl-9  expanded': isSingleUser
+    }"
+  >
+    <ul class="users">
+      <li
+        *ngFor="let user of users"
+        (click)="
+          openUser(user.avatar, user.first_name, user.last_name, user.id)
+        "
+      >
+        <app-user
+          img="{{ user.avatar }}"
+          name="{{ user.first_name }} {{ user.last_name }}"
+        ></app-user>
+      </li>
+    </ul>
+  </div>
+  <div
+    class="col-12  flex-column  align-items-center user-view position-relative expanded"
+    [ngClass]="{
+      'd-none': !isSingleUser,
+      'd-flex col-md-5 col-lg-4 col-xl-3 expanded': isSingleUser
+    }"
+  >
+    <button
+      type="button"
+      class="close"
+      aria-label="Close"
+      (click)="closeUser()"
+    >
+      <span aria-hidden="true">&times;</span>
+    </button>
+    <app-single-user image="{{ image }}" name="{{ name }}"></app-single-user>
+  </div>
+</div>
