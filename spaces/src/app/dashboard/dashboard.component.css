@@ -1,0 +1,23 @@
+.dashboard {
+  background-color: #dedede;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+  margin-bottom: 30px;
+  padding: 15px 0px;
+}
+.breadcrumb {
+  background-color: transparent;
+  padding: 0;
+  margin-bottom: 10px;
+}
+.breadcrumb-item a,
+.breadcrumb-item.active {
+  font-size: 12px;
+  color: #8e44ad;
+  display: block;
+}
+.dashboard__title {
+  font-size: 30px;
+  color: #34495e;
+  font-weight: 500;
+  margin-bottom: 0;
+}

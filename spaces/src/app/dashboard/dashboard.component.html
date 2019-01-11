@@ -1,3 +1,27 @@
-<p>
-  dashboard works!
-</p>
+<div class="dashboard" *ngIf="authService.isLoggedIn()">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 ">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="#">Home</a></li>
+            <li class="breadcrumb-item active" aria-current="page">
+              Dashboard
+            </li>
+          </ol>
+        </nav>
+        <div class="d-flex justify-content-between align-items-center">
+          <h1 class="dashboard__title">Users List</h1>
+          <button
+            class="custom-btn custom-btn-dark"
+            data-toggle="modal"
+            data-target="#exampleModal"
+          >
+            New User
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<app-modal></app-modal>
