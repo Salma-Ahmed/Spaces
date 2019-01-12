@@ -54,4 +54,7 @@
     margin-left: -150px;
     transform: translateY(-50%);
   }
+  .users li {
+    margin: 0;
+  }
 }

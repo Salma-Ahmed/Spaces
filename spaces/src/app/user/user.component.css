@@ -40,3 +40,8 @@
   display: inline-block;
   margin-left: 30px;
 }
+@media (max-width: 767px) {
+  .user__actions a {
+    margin-left: 5px;
+  }
+}
