@@ -1,3 +1,7 @@
+.views {
+  overflow-x: hidden;
+  padding: 4px;
+}
 .users-view {
   background: #fff;
   border-radius: 10px;
@@ -12,7 +16,10 @@
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
   border-radius: 10px;
   background-color: #f5f5f5;
+  transition: all 0.3s ease-in-out;
+  margin-right: 2px;
 }
+
 .user-view.expanded {
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
@@ -25,6 +32,9 @@
   border-bottom: 1px solid #dedede;
   margin: 0px 15px;
 }
+.users li:last-of-type {
+  border-bottom: 0px;
+}
 .close {
   position: absolute;
   top: 15px;
@@ -34,4 +44,14 @@
   width: 14px;
   height: 14px;
   font-weight: 300;
+}
+@media (max-width: 767px) {
+  .user-view {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    width: 300px;
+    margin-left: -150px;
+    transform: translateY(-50%);
+  }
 }

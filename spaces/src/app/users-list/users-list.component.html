@@ -1,4 +1,4 @@
-<div class="row mx-0 mb-5">
+<div class="row mx-0 mb-5 flex-wrap views flex-md-nowrap position-relative">
   <div
     class="col-12 users-view"
     [ngClass]="{
@@ -16,12 +16,14 @@
         <app-user
           img="{{ user.avatar }}"
           name="{{ user.first_name }} {{ user.last_name }}"
+          activeId="{{ id }}"
+          userId="{{ user.id }}"
         ></app-user>
       </li>
     </ul>
   </div>
   <div
-    class="col-12  flex-column  align-items-center user-view position-relative expanded"
+    class="col-12  flex-column  align-items-center user-view  expanded"
     [ngClass]="{
       'd-none': !isSingleUser,
       'd-flex col-md-5 col-lg-4 col-xl-3 expanded': isSingleUser
@@ -35,6 +37,6 @@
     >
       <span aria-hidden="true">&times;</span>
     </button>
-    <app-single-user image="{{ image }}" name="{{ name }}"></app-single-user>
+    <app-single-user image="{{ image }}" name="{{ name }}" userId={{id}}></app-single-user>
   </div>
 </div>

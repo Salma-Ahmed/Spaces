@@ -5,34 +5,87 @@
   role="dialog"
   aria-labelledby="exampleModalLabel"
   aria-hidden="true"
+  data-backdrop="true"
 >
-  <div class="modal-dialog" role="document">
+  <div class="modal-dialog m-0 p-0" role="document">
     <div class="modal-content">
-      <div class="modal-header">
-      </div>
-      <div class="modal-body">
-        <img />
-        <form>
+      <div class="modal-body" *ngIf="getAction().action!=='delete'">
+        <div 
+          class="modal-img rounded-circle d-flex justify-content-center align-items-center"
+        >
+          <img src="assets/img/create-user.svg" *ngIf="getAction().action === 'create'"/>
+          <img class="img-fluid rounded-circle" src={{getAction().img}} *ngIf="getAction().action === 'update'"/>
+        </div>
+        <form #f="ngForm" *ngIf="!getAction().isSubmitted"
+          (ngSubmit)="getAction().action === 'create'?createUser(f.value):updateUser(f.value,getAction().id)"
+         >
           <div class="form-group">
-            <label for="user-name" class="col-form-label">Name</label>
-            <input type="text" class="form-control" id="user-name" />
+            <label for="username" class="col-form-label">Name</label>
+            <input
+              ngModel
+              type="text"
+              name="username"
+              #username="ngModel"
+              class="form-control"
+              id="username"
+              required
+            />
           </div>
           <div class="form-group">
-            <label for="user-job" class="col-form-label">Job</label>
-            <textarea class="form-control" id="user-job"></textarea>
+            <label for="job" class="col-form-label">Job</label>
+            <input
+              ngModel
+              type="text"
+              name="job"
+              #job="ngModel"
+              class="form-control"
+              id="job"
+              required
+            />
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="custom-btn custom-btn-light"
+              data-dismiss="modal"
+            >
+              Cancel
+            </button>
+            <button type="submit" class="custom-btn custom-btn-dark" [disabled]="!f.valid" *ngIf="getAction().action === 'create'">
+              Add
+            </button>
+            <button type="submit" class="custom-btn custom-btn-dark" [disabled]="!f.valid" *ngIf="getAction().action === 'update'">
+                Save
+            </button>
           </div>
         </form>
+        <div *ngIf="getAction().isSubmitted" class="alert alert-success text-center" role="alert">
+            <strong>{{getAction().action}} done successfully</strong> 
+        </div>
       </div>
-      <div class="modal-footer">
-        <button
-          type="button"
-          class="custom-btn custom-btn-dark"
-          data-dismiss="modal"
-        >
-          Cancel
-        </button>
-        <button type="submit" class="custom-btn custom-btn-light">Add</button>
+    <div class="modal-body text-center" *ngIf="getAction().action==='delete'">
+      <div class="delete-box" *ngIf="!getAction().isSubmitted">
+          <p>Are you sure you want to delete</p>
+          <h2>{{getAction().name}}</h2>
+          <div class="modal-footer">
+              <button
+                type="button"
+                class="custom-btn custom-btn-light"
+                data-dismiss="modal"
+              >
+                No
+              </button>
+              <button type="submit" class="custom-btn custom-btn-dark" (click)="deleteUser(getAction().id)">
+                Yes
+              </button>
+             
+            </div>
       </div>
+      
+        <div *ngIf="getAction().isSubmitted" class="alert alert-success text-center" role="alert">
+            <strong>{{getAction().action}} done successfully</strong> 
+        </div>
+    </div>
     </div>
   </div>
 </div>

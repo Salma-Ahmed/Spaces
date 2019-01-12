@@ -25,6 +25,7 @@ export class UsersListComponent implements OnInit {
     this.isSingleUser = true;
   }
   closeUser() {
+    this.id = null;
     this.isSingleUser = false;
   }
 }

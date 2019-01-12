@@ -2,8 +2,6 @@ import { Injectable } from "@angular/core";
 import { HttpClient } from "@angular/common/http";
 import { map } from "rxjs/operators";
 import { JwtHelperService } from "@auth0/angular-jwt";
-import { tokenKey } from "@angular/core/src/view";
-import { tokenKey } from "@angular/core/src/view";
 
 @Injectable()
 export class AuthService {

@@ -2,7 +2,23 @@
   <img src="{{ image }}" class="rounded-circle single-user__img" />
   <h3 class="single-user__title">{{ name }}</h3>
   <div class="d-flex justify-content-between">
-    <button class="custom-btn custom-btn-dark single-user__edit">Edit</button>
-    <button class="custom-btn custom-btn-light single-user__delete">Delete</button>
+    <button
+      class="custom-btn custom-btn-dark single-user__edit"
+      type="button"
+      (click)="setUpdateAction()"
+      data-toggle="modal"
+      data-target="#exampleModal"
+    >
+      Edit
+    </button>
+    <button
+      class="custom-btn custom-btn-light single-user__delete"
+      type="button"
+      (click)="setDeleteAction()"
+      data-toggle="modal"
+      data-target="#exampleModal"
+    >
+      Delete
+    </button>
   </div>
 </div>

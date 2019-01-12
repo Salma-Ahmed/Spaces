@@ -11,13 +11,15 @@ body {
 }
 .custom-btn {
   font-size: 15px;
-  font-weight: bold;
+  font-weight: 500;
   padding: 10px 25px;
-  height: 40px;
+  height: 41px;
   border: 1px solid #8e44ad;
   border-radius: 20px;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
   text-transform: uppercase;
+  cursor: pointer;
+  /* width: 110px; */
 }
 .custom-btn-dark {
   color: #fff;

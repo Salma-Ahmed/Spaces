@@ -13,6 +13,8 @@
         <div class="d-flex justify-content-between align-items-center">
           <h1 class="dashboard__title">Users List</h1>
           <button
+            (click)="setCreateAction()"
+            type="button"
             class="custom-btn custom-btn-dark"
             data-toggle="modal"
             data-target="#exampleModal"
@@ -24,4 +26,3 @@
     </div>
   </div>
 </div>
-<app-modal></app-modal>
